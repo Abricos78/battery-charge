@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+}
+
+.battery {
+    margin: 100px auto;
+    border: 1px solid blue;
+    border-radius: 10px;
+    width: 300px;
+    height: 60px;
+    position: relative;
+    padding: 3px 5px;
+}
+
+.battery::after {
+    content: '';
+    position: absolute;
+    top: 12px;
+    right: -17px;
+    width: 15px;
+    height: 30px;
+    background-color: white;
+    border-radius: 0 4px 4px 0;
+    border: 1px solid blue;
+    border-left: 1px solid white;
+}
+
+.battery-charge {
+    background: rgb(24, 17, 148);
+    background: linear-gradient(90deg, rgba(24, 17, 148, 1) 0%, rgba(4, 4, 219, 1) 32%, rgba(0, 97, 255, 1) 100%);
+    width: 30%;
+    height: 51px;
+    border-radius: 5px;
+}
+
+.battery-animation {
+    animation-name: battery-animation;
+    animation-timing-function: ease-in-out;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes battery-animation {
+    
+    100% {
+        width: 100%;
+    }
+}
+
+.battery-precent {
+    position: absolute;
+    top: 0;
+    right: -25px;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    font-size: 50px;
+}
+
+.charging-status {
+    text-align: center;
+    position: relative;
+    top: -78px;
+    
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.time {
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: center;
+    position: relative;
+    top: -68px;
+}
